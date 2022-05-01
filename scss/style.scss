@@ -1,0 +1,251 @@
+@import "./globals";
+@import "./variables";
+
+//Main container
+.main__container {
+    padding-top: 5rem;
+}
+
+//First section
+.first__section {
+    margin-bottom: 4rem;
+
+    h1 {
+        margin-bottom: 2rem;
+    }
+
+    p span {
+        color: #E1261C;
+        text-decoration: underline;
+    }
+}
+
+//Second section
+.second__section {
+    margin-bottom: 5rem;
+
+    //Main content
+    .main__content {
+
+        &__info {
+
+            h2,
+            p,
+            img {
+                margin-bottom: 2rem;
+            }
+        }
+
+        img {
+            width: 100%;
+            margin-bottom: 2rem;
+        }
+    }
+
+    //List container
+    .list__container {
+
+        //Main nav
+        .main__nav {
+            padding-left: 3rem;
+            list-style: url("../img/bullet-red.png");
+
+            & li:nth-child(3) {
+                list-style: none;
+            }
+        }
+
+        //Sub nav
+        .sub__nav {
+            padding-left: 2rem;
+            margin: 1rem 0;
+            list-style: url("../img/bullet-blue.png");
+        }
+    }
+}
+
+//Calculator
+.calculator {
+    width: 100%;
+    margin-bottom: 5rem;
+    background-color: $white;
+    color: $black;
+    border-radius: 1rem;
+
+    &__form__container {
+        position: relative;
+        padding: 8rem 2rem 2rem;
+
+        h4 {
+            margin-bottom: 2rem;
+        }
+
+        //Form
+        .form {
+            .text__label {
+                display: block;
+                margin-bottom: 0.5rem;
+            }
+
+            //Input container
+            &__input {
+                position: relative;
+                display: inline-block;
+                width: 100%;
+                margin-bottom: 2rem;
+                border: none;
+                outline: none;
+                box-shadow: 0px 2px 4px 0px #0000001A;
+
+                span {
+                    position: absolute;
+                    top: 1.2rem;
+                    right: 2rem;
+                    font-size: 1.8rem;
+                    font-weight: 700;
+                }
+            }
+
+            //Checkbox container
+            .custom-checkbox {
+                width: 20px;
+                height: 20px;
+                cursor: pointer;
+                display: inline-block;
+
+                input {
+                    display: none;
+                }
+
+                .checkmark {
+                    width: 100%;
+                    height: 100%;
+                    display: inline-block;
+                    border: 2px solid #A7B7D8;
+                    border-radius: 4px;
+                    background: #fff url("../img/checkmark.svg") center/0 no-repeat;
+                }
+
+                input:checked+.checkmark {
+                    background-size: 70%;
+                }
+            }
+
+            &__input:first-of-type {
+                margin-bottom: 2rem;
+            }
+
+            .tuberculosis__label {
+                position: relative;
+                top: -5px;
+            }
+        }
+    }
+
+    //Results container
+    .results {
+        padding: 2rem;
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+        border: 1px solid $grey;
+
+        ul li {
+            font-size: 1.4rem;
+            line-height: 1.5rem;
+        }
+
+        ul li span {
+            font-weight: 700;
+        }
+
+        ul li:first-child {
+            margin-bottom: 1rem;
+        }
+
+        ul li:last-child {
+            font-weight: 500;
+            color: $mediumBlue;
+        }
+
+        .amount {
+            font-size: 1.8rem;
+            font-weight: 700;
+            line-height: 2rem;
+        }
+
+        .health__daily__amount {
+            font-weight: 500;
+        }
+    }
+
+    //Total container
+    .total {
+        padding: 2rem 0 8rem;
+        text-align: center;
+
+        ul li:first-child {
+            margin-bottom: 0.5rem;
+            font-size: 1.4rem;
+            font-weight: 500;
+            line-height: 1.5rem;
+        }
+
+        ul li:last-child {
+            font-size: 2.4rem;
+            font-weight: 700;
+            line-height: 3rem;
+        }
+    }
+}
+
+//Media queries
+@media screen and (min-width: 992px) {
+
+    //Calculator section
+    .calculator {
+        max-width: 320px;
+        margin: 0 auto 0;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+
+    //Second section
+    .second__section {
+        .main__content {
+            display: flex;
+        }
+
+        img {
+            max-width: 240px;
+            height: 180px;
+            margin: 0 0 2rem 4rem;
+        }
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    //Main container
+    .main__container {
+        padding-top: 10rem;
+    }
+
+    //Calculator
+    .calculator {
+        margin-bottom: 5rem;
+    }
+
+    //Second section
+    .second__section {
+        margin-bottom: 0;
+    }
+
+}

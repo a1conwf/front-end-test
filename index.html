@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Front-end test</title>
+</head>
+
+<body>
+
+    <div class="container main__container">
+        <div class="row">
+            <div class="col-lg-6">
+                <section class="first__section">
+                    <h1>Quam Tristique Condimentum</h1>
+                    <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec
+                        elit.
+                        Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                        <span>Curabitur
+                            blandit</span> tempus porttitor. Integer posuere erat a ante venenatis dapibus posuere
+                        velit
+                        aliquet.
+                        Vestibulum id ligula porta felis euismod semper.</p>
+                </section>
+
+                <section class="second__section">
+                    <div class="main__content">
+                        <div class="main__content__info">
+                            <h2>Fringilla Euismod Adipiscing Ipsum</h2>
+                            <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                                Maecenas
+                                faucibus mollis interdum. Aenean lacinia bibendum nulla sed.</p>
+                        </div>
+                        <img src="./img/books.png" alt="books-img">
+                    </div>
+
+                    <div class="list__container">
+                        <ul class="main__nav">
+                            <li>Tellus Ullamcorper Inceptos</li>
+                            <li>Magna Condimentum</li>
+                            <li>
+                                <ul class="sub__nav">
+                                    <li>Mattis Tristique</li>
+                                    <li>Pharetra Pellentesque Dapibus</li>
+                                </ul>
+                            </li>
+                            <li>Aenean Inceptos</li>
+                            <li>Parturient Bibendum</li>
+                        </ul>
+                    </div>
+
+                </section>
+            </div>
+
+            <div class="col-lg-6">
+                <section class="calculator">
+                    <div class="calculator__form__container">
+                        <h4>Compensation calculator</h4>
+
+                        <form class="form" id="form">
+                            <label class="text__label" for="income">Average income</label>
+                            <div class="form__input">
+                                <span>&euro;</span>
+                                <input type="text" class="incomeInput" id="income" name="income" />
+                            </div>
+
+                            <label class="text__label" for="days">Days on sick-leave</label>
+                            <div class="form__input">
+                                <span>days</span>
+                                <input type="text" class="daysInput" id="days" name="days" />
+                            </div>
+
+                            <label class="custom-checkbox">
+                                <input type="checkbox" id="tuberculosis" name="tuberculosis" />
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="tuberculosis__label" for="tuberculosis">I have tuberculosis</label>
+
+                            <button type="submit" class="submitBtn">Calculate</button>
+                        </form>
+                    </div>
+
+                    <div class="results">
+                        <ul>
+                            <li>The employer compensates <br> <span class="emp__days">0 days</span></li>
+                            <li class="amount emp__amount">0,00&euro;</li>
+                            <li>Daily allowance <p>28,00 &euro;</p>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>Health insurance compensates <br> <span class="health__days">0 days</span></li>
+                            <li class="amount health__amount">0,00&euro; </li>
+                            <li>Daily allowance <p class="health__daily__amount">0,00&euro;</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="total">
+                        <ul>
+                            <li>Compensation total for <span class="total__days">0 days</span> (net)</li>
+                            <li class="total__value">0,00&euro;</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- JS -->
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
