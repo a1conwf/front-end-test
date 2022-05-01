@@ -52,10 +52,10 @@ $(document).ready(function () {
                 employerCompensationDays = 5;
                 employerCompensationValue = 140;
 
-                //Calculate health insurance compensation days, compensation value
+                //Health compensation days
                 healthCompensationDays = daysSickLeave - 8;
 
-                //Compensation value
+                //Health compensation amount
                 healthCompensationValueDaily = Math.floor((averageIncome * 0.7) / 31);
                 healthCompensationValue = healthCompensationValueDaily * healthCompensationDays;
             }
