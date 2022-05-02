@@ -1,19 +1,7 @@
 $(document).ready(function () {
-    //Employer compensation variables
-    var employerCompensationDays = 0;
-    var employerCompensationValue = 0;
-
-    //Health insurance compensation variables
-    var healthCompensationDays = 0;
-    var healthCompensationValue = 0;
-    var healthCompensationValueDaily = 0;
-
     //Health insurance duration
     var insuranceDuration = 0;
     var isChecked = false;
-
-    //Total compensation
-    var totalCompensation = 0;
 
     $("#tuberculosis").click(function () {
         $(this).toggleClass("active");
@@ -21,6 +9,21 @@ $(document).ready(function () {
 
     $(".submitBtn").click(function () {
         event.preventDefault();
+
+        //Employer compensation value
+        var employerCompensationValue = 0;
+
+        //Health insurance compensation variables
+        var healthCompensationDays = 0;
+        var healthCompensationValue = 0;
+        var healthCompensationValueDaily = 0;
+
+        //Total compensation
+        var totalCompensation = 0;
+        var totalCompensationDays = 0;
+
+        //Employer compensation days
+        var employerCompensationDays = 0;
 
         //Getting values from inputs
         const averageIncome = $(".incomeInput").val();
@@ -47,6 +50,9 @@ $(document).ready(function () {
                     employerCompensationValue = employerCompensationDays * 28;
                 }
 
+                //Total compensation days
+                totalCompensationDays = healthCompensationDays + employerCompensationDays;
+
                 //Else maximum compensation days are 5 and compensation amount is 140
             } else if (daysSickLeave > 8) {
                 employerCompensationDays = 5;
@@ -58,6 +64,9 @@ $(document).ready(function () {
                 //Health compensation amount
                 healthCompensationValueDaily = Math.floor((averageIncome * 0.7) / 31);
                 healthCompensationValue = healthCompensationValueDaily * healthCompensationDays;
+
+                //Total compensation days
+                totalCompensationDays = healthCompensationDays + employerCompensationDays;
             }
         }
 
@@ -71,7 +80,7 @@ $(document).ready(function () {
                 calculateCompensation();
 
                 //Output total compensation days
-                totaldays.html(daysSickLeave + " days");
+                totaldays.html(totalCompensationDays + " days");
             } else {
                 alert("Maximum health insurance duration in case of tuberculosis is " + insuranceDuration + " days");
             }
@@ -85,7 +94,7 @@ $(document).ready(function () {
                 calculateCompensation();
 
                 //Output total compensation days
-                totaldays.html(daysSickLeave + " days");
+                totaldays.html(totalCompensationDays + " days");
             }
         }
 
